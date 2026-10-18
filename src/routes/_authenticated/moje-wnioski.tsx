@@ -93,7 +93,7 @@ function MyRequests() {
             )}
           >
             {f.label}
-            <span className="ml-2 opacity-70">{count(f.key)}</span>
+            <span className="ml-2 opacity-70">{" "}{count(f.key)}</span>
           </button>
         ))}
       </div>
