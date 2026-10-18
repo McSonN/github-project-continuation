@@ -77,7 +77,7 @@ function MyRequests() {
           <h1 className="text-4xl font-semibold">Moje wnioski</h1>
         </div>
         <Button asChild>
-          <Link to="/wniosek/nowy">Nowy wniosek</Link>
+          <Link to="/">Nowy wniosek</Link>
         </Button>
       </div>
 
