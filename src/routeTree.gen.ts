@@ -14,6 +14,7 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as ObiektyRouteImport } from './routes/obiekty'
 import { Route as AuthenticatedMojeWnioskiRouteImport } from './routes/_authenticated/moje-wnioski'
+import { Route as AuthenticatedProfilNgoRouteImport } from './routes/_authenticated/profil-ngo'
 import { Route as AuthenticatedNgoNameRouteImport } from './routes/_authenticated/ngo.$name'
 import { Route as AuthenticatedWniosekIdRouteImport } from './routes/_authenticated/wniosek.$id'
 import { Route as AuthenticatedWniosekNowyRouteImport } from './routes/_authenticated/wniosek.nowy'
@@ -43,6 +44,11 @@ const AuthenticatedMojeWnioskiRoute =
     path: '/moje-wnioski',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
+const AuthenticatedProfilNgoRoute = AuthenticatedProfilNgoRouteImport.update({
+  id: '/profil-ngo',
+  path: '/profil-ngo',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedNgoNameRoute = AuthenticatedNgoNameRouteImport.update({
   id: '/ngo/$name',
   path: '/ngo/$name',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/obiekty': typeof ObiektyRoute
   '/moje-wnioski': typeof AuthenticatedMojeWnioskiRoute
+  '/profil-ngo': typeof AuthenticatedProfilNgoRoute
   '/ngo/$name': typeof AuthenticatedNgoNameRoute
   '/wniosek/$id': typeof AuthenticatedWniosekIdRoute
   '/wniosek/nowy': typeof AuthenticatedWniosekNowyRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/obiekty': typeof ObiektyRoute
   '/moje-wnioski': typeof AuthenticatedMojeWnioskiRoute
+  '/profil-ngo': typeof AuthenticatedProfilNgoRoute
   '/ngo/$name': typeof AuthenticatedNgoNameRoute
   '/wniosek/$id': typeof AuthenticatedWniosekIdRoute
   '/wniosek/nowy': typeof AuthenticatedWniosekNowyRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/obiekty': typeof ObiektyRoute
   '/_authenticated/moje-wnioski': typeof AuthenticatedMojeWnioskiRoute
+  '/_authenticated/profil-ngo': typeof AuthenticatedProfilNgoRoute
   '/_authenticated/ngo/$name': typeof AuthenticatedNgoNameRoute
   '/_authenticated/wniosek/$id': typeof AuthenticatedWniosekIdRoute
   '/_authenticated/wniosek/nowy': typeof AuthenticatedWniosekNowyRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/obiekty'
     | '/moje-wnioski'
+    | '/profil-ngo'
     | '/ngo/$name'
     | '/wniosek/$id'
     | '/wniosek/nowy'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/obiekty'
     | '/moje-wnioski'
+    | '/profil-ngo'
     | '/ngo/$name'
     | '/wniosek/$id'
     | '/wniosek/nowy'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/obiekty'
     | '/_authenticated/moje-wnioski'
+    | '/_authenticated/profil-ngo'
     | '/_authenticated/ngo/$name'
     | '/_authenticated/wniosek/$id'
     | '/_authenticated/wniosek/nowy'
@@ -164,6 +176,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedMojeWnioskiRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/profil-ngo': {
+      id: '/_authenticated/profil-ngo'
+      path: '/profil-ngo'
+      fullPath: '/profil-ngo'
+      preLoaderRoute: typeof AuthenticatedProfilNgoRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/ngo/$name': {
       id: '/_authenticated/ngo/$name'
       path: '/ngo/$name'
@@ -190,6 +209,7 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedMojeWnioskiRoute: typeof AuthenticatedMojeWnioskiRoute
+  AuthenticatedProfilNgoRoute: typeof AuthenticatedProfilNgoRoute
   AuthenticatedNgoNameRoute: typeof AuthenticatedNgoNameRoute
   AuthenticatedWniosekIdRoute: typeof AuthenticatedWniosekIdRoute
   AuthenticatedWniosekNowyRoute: typeof AuthenticatedWniosekNowyRoute
@@ -197,6 +217,7 @@ interface AuthenticatedRouteRouteChildren {
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedMojeWnioskiRoute: AuthenticatedMojeWnioskiRoute,
+  AuthenticatedProfilNgoRoute: AuthenticatedProfilNgoRoute,
   AuthenticatedNgoNameRoute: AuthenticatedNgoNameRoute,
   AuthenticatedWniosekIdRoute: AuthenticatedWniosekIdRoute,
   AuthenticatedWniosekNowyRoute: AuthenticatedWniosekNowyRoute,
