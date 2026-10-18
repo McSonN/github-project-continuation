@@ -44,7 +44,7 @@ export const Route = createFileRoute("/_authenticated/moje-wnioski")({
   component: MyRequests,
 });
 
-function MyRequests() {
+export function MyRequests() {
   const { user } = useSession();
   const [filter, setFilter] = useState<StatusFilter>("all");
 
