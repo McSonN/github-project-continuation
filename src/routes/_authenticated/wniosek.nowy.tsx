@@ -27,6 +27,8 @@ export const Route = createFileRoute("/_authenticated/wniosek/nowy")({
       { title: "Nowy wniosek o rezerwację" },
       { name: "description", content: "Złóż wniosek o rezerwację wybranego terminu." },
       { property: "og:title", content: "Nowy wniosek o rezerwację" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Złóż wniosek o rezerwację wybranego terminu." },
     ],
   }),

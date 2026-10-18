@@ -20,6 +20,8 @@ export const Route = createFileRoute("/_authenticated/wniosek/$id")({
       { title: "Szczegóły wniosku" },
       { name: "description", content: "Szczegóły wniosku o rezerwację obiektu." },
       { property: "og:title", content: "Szczegóły wniosku" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Szczegóły wniosku o rezerwację obiektu." },
     ],
   }),

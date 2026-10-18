@@ -158,11 +158,11 @@ function Header() {
   }
   return (
     <header className="sticky top-0 z-30 border-b bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4">
+      <div className="mx-auto flex min-h-16 max-w-7xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3">
         <Link to="/" className="font-display text-xl font-semibold">
           Sale<span className="text-accent">.</span>
         </Link>
-        <nav className="flex gap-4 text-sm">
+        <nav className="order-3 flex w-full flex-wrap gap-4 text-sm lg:order-none lg:w-auto">
           <Link to="/" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-semibold" }} activeOptions={{ exact: true }}>
             Kalendarz
           </Link>
@@ -171,6 +171,9 @@ function Header() {
           </Link>
           <Link to="/moje-wnioski" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-semibold" }}>
             Moje wnioski
+          </Link>
+          <Link to="/profil-ngo" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-semibold" }}>
+            Profil NGO
           </Link>
         </nav>
         <div className="ml-auto flex items-center gap-3 text-sm">

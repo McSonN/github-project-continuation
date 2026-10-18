@@ -10,6 +10,8 @@ export const Route = createFileRoute("/obiekty")({
       { title: "Obiekty do wynajęcia" },
       { name: "description", content: "Lista sal i obiektów wraz z liczbą miejsc." },
       { property: "og:title", content: "Obiekty do wynajęcia" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:description", content: "Lista sal i obiektów wraz z liczbą miejsc." },
     ],
   }),
