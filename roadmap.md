@@ -1,3 +1,3 @@
 # Tasks
-- [ ] Add Profil NGO navigation and role-aware profile/directory.
-- [ ] Verify search, profile navigation, and owner-scoped reads.
+- [x] Add Profil NGO navigation and role-aware profile/directory.
+- [x] Verify search and profile navigation on the administrator account; test owner-scoped reads.
