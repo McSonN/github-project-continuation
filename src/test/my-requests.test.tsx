@@ -74,7 +74,9 @@ describe("Moje wnioski", () => {
     renderPage([OWN, REJECTED]);
     await waitFor(() => expect(screen.getByText("próba")).toBeInTheDocument());
 
-    screen.getByRole("button", { name: /Odrzucone/ }).click();
+    act(() => {
+      screen.getByRole("button", { name: /Odrzucone/ }).click();
+    });
 
     await waitFor(() => expect(screen.queryByText("próba")).not.toBeInTheDocument());
     expect(screen.getByText("xas")).toBeInTheDocument();
