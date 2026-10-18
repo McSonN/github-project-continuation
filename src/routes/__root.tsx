@@ -169,6 +169,9 @@ function Header() {
           <Link to="/obiekty" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-semibold" }}>
             Obiekty
           </Link>
+          <Link to="/moje-wnioski" className="text-muted-foreground hover:text-foreground" activeProps={{ className: "text-foreground font-semibold" }}>
+            Moje wnioski
+          </Link>
         </nav>
         <div className="ml-auto flex items-center gap-3 text-sm">
           {user ? (
