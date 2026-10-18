@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      booking_history: {
+        Row: {
+          action: string
+          actor_email: string | null
+          actor_id: string | null
+          booking_id: string
+          changes: Json | null
+          created_at: string
+          id: string
+          owner_id: string | null
+        }
+        Insert: {
+          action: string
+          actor_email?: string | null
+          actor_id?: string | null
+          booking_id: string
+          changes?: Json | null
+          created_at?: string
+          id?: string
+          owner_id?: string | null
+        }
+        Update: {
+          action?: string
+          actor_email?: string | null
+          actor_id?: string | null
+          booking_id?: string
+          changes?: Json | null
+          created_at?: string
+          id?: string
+          owner_id?: string | null
+        }
+        Relationships: []
+      }
       bookings: {
         Row: {
           contact_email: string | null
@@ -26,6 +59,7 @@ export type Database = {
           kind: string
           organization: string
           participants: number
+          rejection_reason: string | null
           start_at: string
           status: string
           user_id: string
@@ -42,6 +76,7 @@ export type Database = {
           kind?: string
           organization: string
           participants?: number
+          rejection_reason?: string | null
           start_at: string
           status?: string
           user_id: string
@@ -58,6 +93,7 @@ export type Database = {
           kind?: string
           organization?: string
           participants?: number
+          rejection_reason?: string | null
           start_at?: string
           status?: string
           user_id?: string
